@@ -5,7 +5,7 @@ require "sinatra/activerecord"
 set :database, "sqlite3:xhosa.sqlite3"
 
 get "/" do
-  "click clack nigga"
+  erb :home
 end
 #
 # get "/feed" do
