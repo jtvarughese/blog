@@ -20,3 +20,7 @@ end
 get "/myaccount" do
   erb :myaccount
 end
+
+get "/signin" do
+  erb :signin
+end
