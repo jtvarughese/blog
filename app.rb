@@ -30,31 +30,34 @@ get "/signin" do
   erb :signin
 end
 
-post "/sign-in" do
-  # puts params[:username]
-  # puts params[:password]
+get '/newaccount' do
+  erb :newaccount
+end
 
-  @users = User.where(name: params[:name]).first
+post '/newaccount' do
+  @user = User.create(params[:user])
+  session[:user_id] = @user.id
+  redirect '/'
+end
 
-  if @users.password == params[:password]
-    session[:user_id] = @users.id
-
-    flash[:notice] = "You have been signed in."
-
-    redirect "/"
+# this is what lets the user sign in
+post '/signin' do
+  @user = User.where(username: params[:username]).first
+  if @user && @user.password == params[:password]
+    session[:user_id] = @user.id
+    flash[:notice] = "You have signed in successfully."
+    redirect '/'
   else
     flash[:notice] = "Your username and password do not match."
-
-    redirect "/sign-in"
   end
+   redirect "/signin"
+ end
+
+get "/sign-out" do
+  session[:user_id] = nil
+  redirect "/"
 end
 
-get "/user_create" do
-  User.create(name: "Negrodamus")
-end
-
-
-# get "/sign-out" do
-#   session[:user_id] = nil
-#   redirect "/"
+# get "/user_create" do
+#   User.create(name: "Negrodamus")
 # end

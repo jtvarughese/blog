@@ -1,24 +1,32 @@
 <!-- The sign up/login page -->
-<div class="sign-in-div">
-  <h2>Sign In</h2>
-  <form method="POST" class="" action="/signin" >
-    <label for="username">Username</label>
-    <input type="text" name="username">
-    <label for="password">Password</label>
-    <input type="password" name="password">
-    <input type="submit">
-  </form>
-</div>
-
 <div class="sign-up-div">
-  <h2>Sign Up</h2>
-  <form method="POST" action="/sign_up">
-    <label for="username">Create Username</label>
-    <input type="text" name="username">
-    <label for="password">Create Password</label>
-    <input type="password" name="password">
+  <h2 class="signin-h2">Sign Up</h2>
+  <h3 class="signin-h3">Create a new account</h3>
+  <form method="POST" action="/signin">
+    <label for="username"></label>
+    <input type="text" name="username" placeholder="Create Username">
+    <br>
+    <label for="password"></label>
+    <input type="password" name="password" placeholder="Create Password">
+    <br>
     <input type="submit">
   </form>
 </div>
 
-<button type="button" name="delete">Delete Account</button>
+<hr>
+
+<div class="sign-in-div">
+  <h2 class="signin-h2">Sign In</h2>
+  <h3 class="signin-h3">Use your existing account to log in</h3>
+  <form method="POST" class="" action="/signin" >
+    <label for="username"></label>
+    <input type="text" name="username" placeholder="Username">
+    <br>
+    <label for="password"></label>
+    <input type="password" name="password" placeholder="Password">
+    <br>
+    <input type="submit">
+  </form>
+</div>
+
+<button id="delete-btn" type="button" name="delete">Delete Account</button>
