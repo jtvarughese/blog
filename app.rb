@@ -30,14 +30,15 @@ get "/signin" do
   erb :signin
 end
 
-get '/newaccount' do
-  erb :newaccount
+get '/join' do
+  erb :join
 end
 
-post '/newaccount' do
+post '/join' do
   @user = User.create(params[:user])
   session[:user_id] = @user.id
-  redirect '/'
+  flash[:notice] = "You created a new account!"
+  redirect '/join'
 end
 
 # this is what lets the user sign in
@@ -53,11 +54,11 @@ post '/signin' do
    redirect "/signin"
  end
 
-get "/sign-out" do
+get "/signout" do
   session[:user_id] = nil
   redirect "/"
 end
 
-# get "/user_create" do
-#   User.create(name: "Negrodamus")
-# end
+get "/user_create" do
+    User.create(username:"andrew", password:"jackson")
+end
