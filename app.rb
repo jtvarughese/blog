@@ -34,8 +34,13 @@ get '/join' do
   erb :join
 end
 
+# this creates new user
 post '/join' do
-  @user = User.create(params[:user])
+  @user = User.create(
+  username: params[:user],
+  password: params[:password]
+  )
+
   session[:user_id] = @user.id
   flash[:notice] = "You created a new account!"
   redirect '/join'
@@ -59,6 +64,6 @@ get "/signout" do
   redirect "/"
 end
 
-get "/user_create" do
-    User.create(username:"andrew", password:"jackson")
-end
+# get "/user_create" do
+#     User.create(username:"andrew", password:"jackson")
+# end
