@@ -19,10 +19,17 @@ get "/feed" do
 end
 
 get "/users" do
+  @users = User.all
+  erb :users
+end
+
+get "/users/:id" do
+  @user = User.find(params[:id])
   erb :users
 end
 
 get "/myaccount" do
+  @user = User.find(session[:user_id])
   erb :myaccount
 end
 
@@ -37,10 +44,11 @@ end
 # this creates new user
 post '/join' do
   @user = User.create(
-  username: params[:user],
+  # fname: params[:fname],
+  # lname: params[:lname],
+  username: params[:username],
   password: params[:password]
   )
-
   session[:user_id] = @user.id
   flash[:notice] = "You created a new account!"
   redirect '/join'
@@ -59,6 +67,7 @@ post '/signin' do
    redirect "/signin"
  end
 
+# goes to home page on sign out
 get "/signout" do
   session[:user_id] = nil
   redirect "/"

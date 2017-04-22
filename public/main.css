@@ -187,6 +187,7 @@ nav{
 /* Sign In and Join Page CSS */
 .signin-h2 {
   font-family: "Permanent Marker", cursive;
+  text-align: center;
 }
 
 .signin-h3 {
