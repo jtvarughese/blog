@@ -16,6 +16,118 @@
   transform: translateX(-50%) translateY(-70%);
   background-size: cover;
 }
+.account_header{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  /*background-color: black;*/
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+  padding-top: 20px;
+}
+#ProfilePage{
+  margin: 50px auto;
+  width: 635px;
+  border: 1px solid black;
+  clear: both;
+}
+
+#LeftCol{
+  float: left;
+  width: 200px;
+  text-align: center;
+  margin-right: 20px;
+  border: 1px solid black;
+}
+
+#Photo{
+  width: 199px;
+  height: 200px;
+  border: 1px solid black;
+}
+#PhotoOptions{
+  text-align: center;
+  width: 200px;
+  border: 1px solid brown;
+}
+
+#Info{
+  width: 400px;
+  text-align: center;
+  float: right;
+  /*border: 1px solid black;*/
+}
+
+#Info strong{
+  display: inline-block;
+  width: 100px;
+  border: 1px solid orange;
+}
+
+#Info span{
+  display: inline-block;
+  width: 250px;
+  border: 1px solid black;
+}
+
+.saveButton {
+  margin-left: 400px;
+  margin-bottom: 10px;
+  font-size: 17px;
+
+}
+.deleteButton {
+  margin-left: 600px;
+  font-size: 17px;
+}
+
+button{
+  border-radius: 40px;
+  border: 5px;
+}
+
+footer {
+  clear: both;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /*padding: 0 10px;*/
+  padding-right: 40px;
+  height: 42px;
+  background: rgba(0,0,0,0.2);
+  z-index: 300;
+}
+li{
+  list-style: none;
+  left: 0;
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+li > a{
+  background: transparent;
+  text-decoration: none;
+  text-align: center;
+  transition:0.3s ease-out;
+}
+
+#media{
+  width: 25px;
+  margin-right: 10px;
+}
+
+#media:hover{
+  /*color: #fff;*/
+}
+.footy{
+  /*position: relative;*/
+  /*overflow: hidden;*/
+}
+.social{
+  /*display: inline;
+  text-decoration: none;*/
+}
 
 
 /*video {
@@ -180,17 +292,8 @@ nav{
 }
 
 
-.footy{
-  text-decoration: none;
-}
-.social{
-  display: inline;
-  text-decoration: none;
-}
 
-#media{
-  width: 25px;
-}
+
 
 .container{
   width: 50%;
