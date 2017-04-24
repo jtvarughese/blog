@@ -2,7 +2,7 @@
   font-family: 'Permanent Marker', cursive;
   text-align: center;
   font-size: 4em;
-  color: white;
+  color: black;
 }
 
 .theBanner{
@@ -24,6 +24,10 @@
   font-family: 'Permanent Marker', cursive;
   color: black;
   padding-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
 }
 #ProfilePage{
   margin: 50px auto;
@@ -291,14 +295,27 @@ nav{
   display: block;
 }
 
-
-
-
-
 .container{
   width: 50%;
   margin: 0 auto;
   float: center;
+}
+
+h3{
+  margin: 0 auto;
+  text-align: center;
+  font-family: Georgia, sans-serif;
+}
+.feed_header{
+  display: block;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: "Heroid",Georgia,Times,"Times New Roman",serif;
+  font-weight: 400;
+}
+.message_title{
+  box-sizing: border-box;
+  outline: 0;
 }
 
 /*#slides {
