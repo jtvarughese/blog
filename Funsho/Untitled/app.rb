@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get "/"do
-  erb :home
+  erb :sign_up
 end

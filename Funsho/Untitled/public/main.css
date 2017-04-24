@@ -99,7 +99,8 @@ footer {
   /*padding: 0 10px;*/
   padding-right: 40px;
   height: 42px;
-  background: rgba(0,0,0,0.2);
+  background: black;
+
   z-index: 300;
 }
 li{
@@ -125,12 +126,12 @@ li > a{
   /*color: #fff;*/
 }
 .footy{
-  /*position: relative;*/
-  /*overflow: hidden;*/
+  position: relative;
+  overflow: hidden;
 }
 .social{
-  /*display: inline;
-  text-decoration: none;*/
+  display: inline;
+  text-decoration: none;
 }
 
 
@@ -149,28 +150,6 @@ li > a{
   transition: 1s opacity;
 }*/
 
-@media (min-width: 300px) {
-  background-color: white;
-}
-
-@media (min-width: 550px) {
-  background-color: white;
-
-}
-
-@media (min-width: 750px) {
-  background-color: white;
-
-}
-
-@media (min-width: 1000px) {
-  background-color: white;
-
-}
-
-@media (min-width: 1200px) {
-  background-color: white;
-}
 
 nav{
   text-align: center;
@@ -304,18 +283,83 @@ h3{
 }
 
 /*Join Page*/
+.joinTitle{
+  text-align: center;
+}
 .signupform {
   text-align: center;
   font-size: 20px;
-  padding-top: 40px;
-}
-
-.signupinput {
-  margin: 10px;
+  /*padding-top: 40px;*/
 }
 
 .signupbackground {
+  margin: 0 auto;
+  background-color: white;
+  width: 600px;
+  height: 335px;
+}
+
+/*Edit My Account Page*/
+.editAccount {
   background-color: #e8fffd;
   width: 400px;
-  height:
+  height:400px;
+  margin: 20px;
+  border: 2px solid black;
+  display: inline-table;
+  text-align: center;
+}
+
+.ecenter {
+  text-align: center;
+}
+
+.editheading {
+  text-align: center;
+  font-size: 50px;
+  margin: 30px 20px 20px 20px;
+}
+
+.deletecenter {
+  text-align: center;
+  margin: 20px;
+}
+
+#deleteaccount {
+  color: white;
+  background-color: #232323;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+#deleteaccount:hover {
+  background-color: #ff515d;
+}
+
+input {
+  margin: 10px;
+}
+
+
+@media (min-width: 300px) {
+  background-color: white;
+}
+
+@media (min-width: 550px) {
+  background-color: white;
+
+}
+
+@media (min-width: 750px) {
+  background-color: white;
+
+}
+
+@media (min-width: 1000px) {
+  background-color: white;
+
+}
+
+@media (min-width: 1200px) {
+  background-color: white;
 }
