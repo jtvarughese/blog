@@ -1,4 +1,36 @@
+<header>
+  <div class="account_header">
+    My Account
+  </div>
+</header>
 
-<h2 class="signin-h2">My Account</h2>
-
-<button id="delete-btn" type="button" name="delete">Delete Account</button>
+<div id="ProfilePage">
+  <div id="LeftCol">
+    <div id="Photo">
+    </div>
+    <div id="ProfileOptions">Profile Picture
+    </div>
+  </div>
+  <div id="Info">
+    <p>
+      <strong>Username:</strong>
+      <span><%= @user.username %></span>
+    </p>
+    <p>
+      <strong>Password:</strong>
+      <span><%= @user.password %></span>
+    </p>
+    <p>
+      <strong>First Name:</strong>
+      <span><%= @user.fname %></span>
+    </p>
+    <p>
+      <strong>Last Name:</strong>
+      <span><%= @user.lname %></span>
+    </p>
+  </div>
+  <div style="clear:both"></div>
+  <div class="updateButton">
+    <button type="button" name="edit" onclick="edit.erb">Update</button>
+  </div>
+</div>
