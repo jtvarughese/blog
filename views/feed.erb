@@ -1,1 +1,22 @@
 <h2 class="signin-h2">Feed</h2>
+<h1 class="feed_header">
+  <u>Black Batman vs Black Hulk</u>
+</h1>
+
+<form class="postform" action="/create-post" method="post">
+  <textarea name="content" rows="8" cols="30" maxlength="150"></textarea>
+  <br>
+  <button type="submit" name="button">post</button>
+</form>
+
+<table style="width:100%">
+  <tr>
+    <div class="feed">
+      <% @posts.each do |post| %>
+      <p class="post-info"><%= post.title %></p>
+      <p class="post-info"><%= post.content %></p>
+      <% end %>
+      <a class="editBtn" href="">delete</a>
+    </div>
+  </tr>
+</table>

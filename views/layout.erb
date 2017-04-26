@@ -3,49 +3,54 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+    <!-- <div class="theBanner">
+      <img id="banner" src="https://www.europalace.com/blog/wp-content/uploads/www_europalace_com/2016/10/Marvel-vs-DC-1.jpg" alt="banner">
+    </div> -->
     <title></title>
   </head>
   <body>
     <header>
       <div class="Title">Black Heroes Matter</div>
       <nav class = "navbar">
-        <div class="container">
+        <div class="topbar">
           <a class="homeLink" href="/">Home</a>
-          <a class="feedLink" href="/feed">Feed</a>
-          <div class="dropdown">
-            <button class="dropbtn" onclick="myFunction()">Users</button>
-            <div class="dropdown-content" id="myDropdown">
-              <a class="accountLink" href="">My Account</a>
-            </div>
-          </div>
+          <a class="feedLink" href="feed">Feed</a>
+          <a class="usersLink" href="/users">Users</a>
+          <a class="accountLink" href="/myaccount">My Account</a>
           <div class="logIn">
             <a class="join" href="/join">Join</a>
             <a class="signIn" href="/signin">Sign In</a>
           </div>
         </div>
+
       </nav>
     </header>
-
     <div id="flash-message">
       <% if flash[:notice] %>
       <%= flash[:notice] %>
       <% end %>
     </div>
 
-  <%= yield %>
+    <%= yield %>
 
-    <footer>
-      <div class="footy">
-          <ul>
-            <li class="social"><a class="faceb" href="http://www.facebook.com"><img id="media" src="facebook.png" alt="medi"></a></li>
-            <li class="social"><a class="insta" href="http://www.instagram.com"><img id="media" src="instagram.png" alt="medi"></a></li>
-            <li class="social"><a class="twit" href="http://www.twitter.com"><img id="media" src="twitter.png" alt="medi"></a></li>
-            <li class="social"><a class="googl" href="http://www.googleplus.com"><img id="media" src="googleplus.png" alt="medi"></a></li>
-            <li class="social"><a class="stumbl" href="http://www.stumbleupon.com"><img id="media" src="stumbleupon.png" alt="medi"></a></li>
-          </ul>
-      </div>
-    </footer>
-    <script type="text/javascript" src="main.js"></script>
+  <footer>
+    <div class="footy">
+      <ul>
+        <li class="social"><a class="faceb" href="http://www.facebook.com" target="_blank"><img id="media" src="facebook.png" alt="medi"></a></li>
+        <li class="social"><a class="insta" href="http://www.instagram.com" target="_blank"><img id="media" src="instagram.png" alt="medi"></a></li>
+        <li class="social"><a class="twit" href="http://www.twitter.com" target="_blank"><img id="media" src="twitter.png" alt="medi"></a></li>
+        <li class="social"><a class="googl" href="http://www.googleplus.com" target="_blank"><img id="media" src="googleplus.png" alt="medi"></a></li>
+        <li class="social"><a class="stumbl" href="http://www.stumbleupon.com" target="_blank"><img id="media" src="stumbleupon.png" alt="medi"></a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+
+  <script type="text/javascript" src="main.js"></script>
   </body>
+
+
 </html>
