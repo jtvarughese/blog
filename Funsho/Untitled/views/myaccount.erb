@@ -14,30 +14,29 @@
   <div id="Info">
     <p>
       <strong>Username:</strong>
-      <span>Jaunst</span>
+      <span><%= @user_profile.user.username %></span>
     </p>
     <p>
       <strong>Password:</strong>
-      <span>*******</span>
+      <span><%= @user_profile.user.password %></span>
     </p>
     <p>
       <strong>First Name:</strong>
-      <span>Dylan</span>
+      <span><%= @user_profile.fname %></span>
     </p>
     <p>
       <strong>Last Name:</strong>
-      <span>Dylan</span>
+      <span><%= @user_profile.lname %></span>
     </p>
     <p>
       <strong>Email:</strong>
-      <span>Dylanx5@gmail.com</span>
+      <span></span>
     </p>
+
+
   </div>
   <div style="clear:both"></div>
-  <div class="saveButton">
-    <button type="button" name="save" onclick="">Save</button>
+  <div class="updateButton">
+    <button type="button" name="edit" onclick="edit.erb">Update</button>
   </div>
-</div>
-<div class="deleteButton">
-  <button type="button" name="delete" onclick="">Delete Account</button>
 </div>

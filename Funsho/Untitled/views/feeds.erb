@@ -1,0 +1,27 @@
+<h3>Feed</h3>
+<h1 class="feed_header">
+  <u>Black Batman vs Black Hulk</u>
+</h1>
+
+<h4><%= @profile.user.username %></h4>
+
+<form class="postform" action="/create-post" method="post">
+  <textarea name="content" rows="8" cols="30" maxlength="150"></textarea>
+  <br>
+  <button type="submit" name="button">post</button>
+</form>
+
+<% @posts.reverse.each do |post| %>
+
+<table style="width:100%">
+  <tr>
+  <div class="feed">
+    <div class="feed_date"> <%= post.title %> </div>
+    <div class="feedcontent"> <%= post.content %></div>
+    <div class="editpost">
+      <a class="editBtn" href="">delete</a>
+    </div>
+  </div>
+  </tr>
+</table>
+<% end %>

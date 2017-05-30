@@ -1,3 +1,4 @@
+/* Home Page and Navbar CSS */
 .Title{
   font-family: 'Permanent Marker', cursive;
   text-align: center;
@@ -98,11 +99,11 @@ footer {
   width: 100%;
   /*padding: 0 10px;*/
   padding-right: 40px;
-  height: 42px;
+  height: 60px;
   background: black;
-
   z-index: 300;
 }
+
 li{
   list-style: none;
   left: 0;
@@ -219,6 +220,7 @@ nav{
   background-color: black;
   font-family: 'Permanent Marker', cursive;
   margin-top: .1em;
+  color: white;
 }
 
 .topbar a {
@@ -230,30 +232,9 @@ nav{
 }
 
 .topbar a:hover{
-  background-color: aliceblue;
+  background-color: white;
+  color: black;
 }
-
-/*.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: black;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}*/
-
-/*.dropdown-content a:hover {
-  background-color: lightgreen;
-}*/
 
 .show {
   display: block;
@@ -262,7 +243,7 @@ nav{
 .container{
   width: 50%;
   margin: 0 auto;
-  float: center;
+  /*float: center;*/
 }
 
 h3{
@@ -362,4 +343,36 @@ input {
 
 @media (min-width: 1200px) {
   background-color: white;
+}
+
+/* Sign In and Join Page CSS */
+.signin-h2 {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+}
+
+.signin-h3 {
+  font-family: "Abel", sans-serif;
+}
+
+.sign-up-div {
+  text-align: center;
+  display: block;
+  margin: 0px auto;
+  width: 300px;
+  font-family: "Abel", sans-serif;
+}
+
+.sign-in-div {
+  text-align: center;
+  margin: 0px auto;
+  display: block;
+  width: 300px;
+  font-family: "Abel", sans-serif;
+}
+
+flash {
+  font-family: "Abel", sans-serif;
+  font-size: 24px;
+  text-align: center;
 }

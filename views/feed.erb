@@ -4,9 +4,11 @@
 </h1>
 
 <form class="postform" action="/create-post" method="post">
+
   <textarea name="title" row="8" cols="30"maxlength="30"placeholder="Title"></textarea>
   <br>
   <textarea name="content" rows="8" cols="30" maxlength="150"placeholder="Content"></textarea>
+
   <br>
   <button type="submit" name="button">post</button>
 </form>
@@ -18,7 +20,11 @@
       <p class="post-info"><%= post.title %></p>
       <p class="post-info"><%= post.content %></p>
       <% end %>
+
       <button type="submit" a class="editBtn" href="/">delete</a></button>
+
+      <a class="editBtn" href="">delete</a>
+
     </div>
   </tr>
 </table>

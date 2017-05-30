@@ -28,13 +28,18 @@ post '/feed' do
   @post = Post.new({:content => params[:post]})
   @post.save
   session[:post_id] = @post.id
-  session[:user_id] = @user.id
-  flash[:notice] = "You created a new post!"
+  # @post =  Post.create(params[:post])
+  # session[:user_id] = @post.id
+  # session[:user_id] = @user.id
+  # flash[:notice] = "You created a new post!"
   redirect '/feed'
 end
 
 # this is what creates the posts
 post '/create-post' do
+  @post = Post.new({:content => params[:post]})
+  @post.save
+  session[:post_id] = @post.id
   Post.create(
   title: params[:title],
   content: params[:content],
@@ -121,6 +126,7 @@ post "/signout" do
   session[:user_id] = nil
   redirect "/"
 end
+
 
 get "/delete_account" do
   User.find(session[:user_id]).destroy
