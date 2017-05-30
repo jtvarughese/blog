@@ -25,8 +25,9 @@ get "/feed" do
 end
 
 post '/feed' do
-  @post =  Post.create(params[:post])
-  session[:user_id] = @post.id
+  @post = Post.new({:content => params[:post]})
+  @post.save
+  session[:post_id] = @post.id
   session[:user_id] = @user.id
   flash[:notice] = "You created a new post!"
   redirect '/feed'
@@ -34,6 +35,11 @@ end
 
 # this is what creates the posts
 post '/create-post' do
+  Post.create(
+  title: params[:title],
+  content: params[:content],
+  user_id: session[:user_id]
+  )
   flash[:notice] = "You created a new post!"
   redirect '/feed'
 end
@@ -50,6 +56,12 @@ get "/users/:id" do
 end
 
 get "/myaccount" do
+  @user = User.find(session[:user_id])
+  pp @user
+  erb :myaccount
+end
+
+post "/myaccount" do
   @user = User.find(session[:user_id])
   pp @user
   erb :myaccount
@@ -110,11 +122,33 @@ post "/signout" do
   redirect "/"
 end
 
-post "/delete-account" do
+get "/delete_account" do
   User.find(session[:user_id]).destroy
     session[:user_id] = nil
   redirect "/"
 end
+
+post "/delete_account" do
+  User.find(session[:user_id]).destroy
+    session[:user_id] = nil
+  redirect "/"
+end
+
+get "/edit" do
+  erb :edit
+end
+
+  # def destroy
+
+    # @user = User.find(params[:id])
+    # if @user.destroy
+    #   flash[:notice] = "Profile deleted."
+    #   session[:user_id] = nil
+    # else
+    #   flash[:alert] = "Could not delete your profile."
+    # end
+    #   redirect_to "/"
+# end
 
 # get "/user_create" do
 #     User.create(username:"andrew", password:"jackson")
